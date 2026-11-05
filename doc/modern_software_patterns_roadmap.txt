@@ -1,8 +1,10 @@
 MODERN SOFTWARE PATTERNS & ARCHITECTURE — EXTENDED STUDY ROADMAP
 ============================================================
 
-Purpose: Continue the existing 23-lesson Gang of Four (GoF) tutorial.
-Start: Lesson 24 — Dependency Injection.
+Purpose: Continue beyond the original Gang of Four (GoF) tutorial.
+Level 0: Original 23 GoF lessons, numbered 0.1–0.23.
+Start of new material: Lesson 1.1 — Dependency Injection.
+Numbering: Level.Topic; topic numbering restarts at 1 in each level.
 
 SCOPE AND CLASSIFICATION
 - This is a proposed study curriculum, not an official or exhaustive
@@ -18,13 +20,52 @@ SCOPE AND CLASSIFICATION
   databases, messaging, caching, networking, and fault tolerance.
 
 LEVEL SUMMARY
-1. CORE APPLICATION AND SYSTEM DESIGN: 33 topics
-2. ESSENTIAL DISTRIBUTED-SYSTEMS PATTERNS: 42 topics
-3. ADVANCED ARCHITECTURE AND OPERATIONS: 12 topics
-Total: 87 topics (Lessons 24–110).
+0. ORIGINAL GANG OF FOUR (GOF) PATTERNS: 23 topics (0.1–0.23)
+1. CORE APPLICATION AND SYSTEM DESIGN: 33 topics (1.1–1.33)
+2. ESSENTIAL DISTRIBUTED-SYSTEMS PATTERNS: 42 topics (2.1–2.42)
+3. ADVANCED ARCHITECTURE AND OPERATIONS: 12 topics (3.1–3.12)
+Total: 110 topics across Levels 0–3; 87 new topics in Levels 1–3.
 
-The first six lessons (24–29) preserve the previously agreed order.
-Subsequent lesson numbers below are proposed and can be adjusted.
+The first six Level 1 topics (1.1–1.6) preserve the previously agreed order.
+Subsequent topic numbers below are proposed and can be adjusted.
+
+========================================================================
+LEVEL 0 — ORIGINAL GANG OF FOUR (GOF) DESIGN PATTERNS
+========================================================================
+
+Previously studied topics (numbering retained here as a reference)
+-----------------------------------------------------------------
+Creational patterns
+Lesson 0.1. Factory Method
+Lesson 0.2. Abstract Factory
+Lesson 0.3. Builder
+Lesson 0.4. Singleton
+Lesson 0.5. Prototype
+
+Structural patterns
+Lesson 0.6. Adapter
+Lesson 0.7. Decorator
+Lesson 0.8. Facade
+Lesson 0.9. Composite
+Lesson 0.10. Proxy
+Lesson 0.11. Bridge
+Lesson 0.12. Flyweight
+
+Behavioral patterns
+Lesson 0.13. Chain of Responsibility
+Lesson 0.14. Command
+Lesson 0.15. Iterator
+Lesson 0.16. Mediator
+Lesson 0.17. Memento
+Lesson 0.18. Observer
+Lesson 0.19. State
+Lesson 0.20. Strategy
+Lesson 0.21. Template Method
+Lesson 0.22. Visitor
+Lesson 0.23. Interpreter
+
+These 23 topics belong to the original tutorial. Levels 1–3 extend it;
+the new topics keep their original order, types, and learning goals.
 
 ========================================================================
 LEVEL 1 — CORE APPLICATION AND SYSTEM DESIGN
@@ -32,112 +73,112 @@ LEVEL 1 — CORE APPLICATION AND SYSTEM DESIGN
 
 Foundational patterns (agreed next six lessons)
 -----------------------------------------------
-Lesson 024. Dependency Injection
+Lesson 1.1. Dependency Injection
     Type: Design technique
     Goal: Supply dependencies from outside a component to reduce coupling and improve tests.
-Lesson 025. Repository
+Lesson 1.2. Repository
     Type: Data-access pattern
     Goal: Provide a persistence abstraction between domain logic and storage.
-Lesson 026. Model-View-Controller (MVC)
+Lesson 1.3. Model-View-Controller (MVC)
     Type: Architectural pattern
     Goal: Separate data/application behavior, presentation, and input coordination.
-Lesson 027. Event-Driven Architecture (EDA)
+Lesson 1.4. Event-Driven Architecture (EDA)
     Type: Architectural style
     Goal: Decouple components through the publication and handling of events.
-Lesson 028. Actor Model
+Lesson 1.5. Actor Model
     Type: Concurrency model
     Goal: Represent independent stateful actors that communicate through messages.
-Lesson 029. Orchestrator-Worker
+Lesson 1.6. Orchestrator-Worker
     Type: Coordination pattern
     Goal: Assign and coordinate tasks across multiple workers.
 
 Application structure and boundaries
 ------------------------------------
-Lesson 030. Inversion of Control (IoC)
+Lesson 1.7. Inversion of Control (IoC)
     Type: Design principle
     Goal: Move control of dependency creation or execution outside a component.
-Lesson 031. Service Layer
+Lesson 1.8. Service Layer
     Type: Application pattern
     Goal: Offer a clear boundary for application operations and workflows.
-Lesson 032. Data Transfer Object (DTO)
+Lesson 1.9. Data Transfer Object (DTO)
     Type: Data-transfer pattern
     Goal: Carry data across process or architectural boundaries.
-Lesson 033. Domain Model / Aggregate
+Lesson 1.10. Domain Model / Aggregate
     Type: Domain-design concepts
     Goal: Model domain behavior and enforce consistency boundaries.
-Lesson 034. Unit of Work
+Lesson 1.11. Unit of Work
     Type: Persistence pattern
     Goal: Track and commit a set of related persistence changes together.
-Lesson 035. Data Mapper
+Lesson 1.12. Data Mapper
     Type: Persistence pattern
     Goal: Keep object-domain models independent of database representation.
-Lesson 036. Model-View-ViewModel (MVVM)
+Lesson 1.13. Model-View-ViewModel (MVVM)
     Type: Presentation pattern
     Goal: Separate UI state/presentation logic from views.
-Lesson 037. Hexagonal Architecture (Ports and Adapters)
+Lesson 1.14. Hexagonal Architecture (Ports and Adapters)
     Type: Architectural style
     Goal: Use ports and adapters to isolate domain logic from external systems.
-Lesson 038. Clean Architecture
+Lesson 1.15. Clean Architecture
     Type: Architectural style
     Goal: Keep dependency direction centered on application/domain logic.
 
 Service and application architecture
 ------------------------------------
-Lesson 039. Modular Monolith
+Lesson 1.16. Modular Monolith
     Type: Architectural style
     Goal: Enforce modular boundaries inside one deployable application.
-Lesson 040. Microservices Architecture
+Lesson 1.17. Microservices Architecture
     Type: Architectural style
     Goal: Compose systems from independently deployable services.
-Lesson 041. Decomposition by Business Capability / Subdomain
+Lesson 1.18. Decomposition by Business Capability / Subdomain
     Type: Service-boundary strategy
     Goal: Identify cohesive service boundaries around business capabilities.
-Lesson 042. API Gateway
+Lesson 1.19. API Gateway
     Type: Gateway pattern
     Goal: Provide a single client-facing entry point to backend services.
-Lesson 043. Backend for Frontend (BFF)
+Lesson 1.20. Backend for Frontend (BFF)
     Type: API architecture pattern
     Goal: Expose APIs adapted to the needs of different clients.
-Lesson 044. Strangler Fig
+Lesson 1.21. Strangler Fig
     Type: Migration pattern
     Goal: Replace legacy functionality incrementally.
-Lesson 045. Anti-Corruption Layer
+Lesson 1.22. Anti-Corruption Layer
     Type: Integration pattern
     Goal: Translate external models without contaminating the domain model.
 
 First distributed building blocks and operations
 ------------------------------------------------
-Lesson 046. Publish-Subscribe
+Lesson 1.23. Publish-Subscribe
     Type: Messaging pattern
     Goal: Broadcast events to independently interested subscribers.
-Lesson 047. Point-to-Point / Work Queue
+Lesson 1.24. Point-to-Point / Work Queue
     Type: Messaging pattern
     Goal: Distribute tasks through a queue to one consuming worker per delivery.
-Lesson 048. Request-Reply
+Lesson 1.25. Request-Reply
     Type: Messaging pattern
     Goal: Associate a response with a request across a messaging boundary.
-Lesson 049. Worker Pool
+Lesson 1.26. Worker Pool
     Type: Concurrency pattern
     Goal: Bound and distribute parallel task execution among workers.
-Lesson 050. Fan-Out / Fan-In
+Lesson 1.27. Fan-Out / Fan-In
     Type: Parallel-processing pattern
     Goal: Dispatch parallel work and merge results.
-Lesson 051. Cache-Aside
+Lesson 1.28. Cache-Aside
     Type: Caching pattern
     Goal: Load data into cache on misses and explicitly manage invalidation.
-Lesson 052. Timeout and Deadline
+Lesson 1.29. Timeout and Deadline
     Type: Resilience technique
     Goal: Limit how long operations and end-to-end requests can run.
-Lesson 053. Rate Limiting
+Lesson 1.30. Rate Limiting
     Type: Traffic-control pattern
     Goal: Constrain request throughput to protect resources.
-Lesson 054. Health Endpoint Monitoring
+Lesson 1.31. Health Endpoint Monitoring
     Type: Operations pattern
     Goal: Expose health signals to detect and respond to failures.
-Lesson 055. Feature Flags
+Lesson 1.32. Feature Flags
     Type: Release technique
     Goal: Control feature activation separately from deployment.
-Lesson 056. Externalized Configuration
+Lesson 1.33. Externalized Configuration
     Type: Configuration pattern
     Goal: Keep environment-specific configuration outside application code.
 
@@ -147,142 +188,142 @@ LEVEL 2 — ESSENTIAL DISTRIBUTED-SYSTEMS PATTERNS
 
 Messaging, routing, and delivery semantics
 ------------------------------------------
-Lesson 057. Competing Consumers
+Lesson 2.1. Competing Consumers
     Type: Messaging pattern
     Goal: Scale queue processing with multiple consumers.
-Lesson 058. Asynchronous Request-Reply
+Lesson 2.2. Asynchronous Request-Reply
     Type: Messaging pattern
     Goal: Accept requests now and make results available later.
-Lesson 059. Correlation Identifier
+Lesson 2.3. Correlation Identifier
     Type: Messaging pattern
     Goal: Link replies and events to the originating operation.
-Lesson 060. Content-Based Router
+Lesson 2.4. Content-Based Router
     Type: Messaging pattern
     Goal: Choose destinations according to message contents.
-Lesson 061. Pipes and Filters
+Lesson 2.5. Pipes and Filters
     Type: Processing pattern
     Goal: Compose processing from independently reusable stages.
-Lesson 062. Splitter
+Lesson 2.6. Splitter
     Type: Messaging pattern
     Goal: Split a composite message into smaller messages.
-Lesson 063. Aggregator
+Lesson 2.7. Aggregator
     Type: Messaging pattern
     Goal: Combine multiple related messages or partial results.
-Lesson 064. Scatter-Gather
+Lesson 2.8. Scatter-Gather
     Type: Messaging pattern
     Goal: Broadcast requests to recipients and gather responses.
-Lesson 065. Dead Letter Queue
+Lesson 2.9. Dead Letter Queue
     Type: Messaging pattern
     Goal: Isolate messages that cannot be handled successfully.
-Lesson 066. Idempotent Consumer
+Lesson 2.10. Idempotent Consumer
     Type: Messaging reliability pattern
     Goal: Make duplicate deliveries safe to process.
-Lesson 067. Transactional Outbox
+Lesson 2.11. Transactional Outbox
     Type: Persistence-messaging pattern
     Goal: Reliably publish events associated with database changes.
-Lesson 068. Claim Check
+Lesson 2.12. Claim Check
     Type: Messaging pattern
     Goal: Store large message contents separately and pass a reference.
 
 Service communication and worker coordination
 ---------------------------------------------
-Lesson 069. Service Discovery
+Lesson 2.13. Service Discovery
     Type: Service architecture pattern
     Goal: Find healthy instances of a changing service.
-Lesson 070. Sidecar
+Lesson 2.14. Sidecar
     Type: Deployment pattern
     Goal: Attach auxiliary service functionality alongside an application.
-Lesson 071. Leader Election
+Lesson 2.15. Leader Election
     Type: Distributed coordination pattern
     Goal: Choose one process to serve as coordinator or leader.
-Lesson 072. Leader-Follower
+Lesson 2.16. Leader-Follower
     Type: Replication/coordination pattern
     Goal: Organize components around a primary leader and followers.
-Lesson 073. Lease and Heartbeat
+Lesson 2.17. Lease and Heartbeat
     Type: Coordination technique
     Goal: Track liveness and time-limited resource ownership.
-Lesson 074. Scheduler-Agent-Supervisor
+Lesson 2.18. Scheduler-Agent-Supervisor
     Type: Distributed workflow pattern
     Goal: Assign scheduled work, execute through agents, and supervise outcomes.
-Lesson 075. Work Stealing
+Lesson 2.19. Work Stealing
     Type: Scheduling pattern
     Goal: Let idle workers pull tasks from busier workers.
 
 Resilience and backpressure
 ---------------------------
-Lesson 076. Retry with Exponential Backoff and Jitter
+Lesson 2.20. Retry with Exponential Backoff and Jitter
     Type: Resilience pattern
     Goal: Retry transient failures while avoiding synchronized retries.
-Lesson 077. Circuit Breaker
+Lesson 2.21. Circuit Breaker
     Type: Resilience pattern
     Goal: Temporarily stop calls to failing dependencies.
-Lesson 078. Bulkhead
+Lesson 2.22. Bulkhead
     Type: Resilience pattern
     Goal: Isolate resource pools to contain failures.
-Lesson 079. Load Shedding
+Lesson 2.23. Load Shedding
     Type: Overload-control technique
     Goal: Reject lower-priority or excess work when overloaded.
-Lesson 080. Queue-Based Load Leveling
+Lesson 2.24. Queue-Based Load Leveling
     Type: Load-management pattern
     Goal: Buffer sudden request spikes behind a queue.
-Lesson 081. Fallback
+Lesson 2.25. Fallback
     Type: Resilience technique
     Goal: Offer an alternate behavior when the primary path fails.
-Lesson 082. Graceful Degradation
+Lesson 2.26. Graceful Degradation
     Type: Resilience principle
     Goal: Maintain reduced functionality under partial failure.
-Lesson 083. Failover and Redundancy
+Lesson 2.27. Failover and Redundancy
     Type: Availability architecture
     Goal: Use redundant capacity and switch away from failed components.
 
 Data ownership, consistency, and transactions
 ---------------------------------------------
-Lesson 084. Database per Service
+Lesson 2.28. Database per Service
     Type: Microservice data pattern
     Goal: Assign independent ownership of persistence to each service.
-Lesson 085. Command Query Responsibility Segregation (CQRS)
+Lesson 2.29. Command Query Responsibility Segregation (CQRS)
     Type: Data architecture pattern
     Goal: Separate read and write responsibilities or representations.
-Lesson 086. Saga
+Lesson 2.30. Saga
     Type: Distributed transaction pattern
     Goal: Coordinate multi-service transactions as local steps.
-Lesson 087. Compensating Transaction
+Lesson 2.31. Compensating Transaction
     Type: Distributed transaction technique
     Goal: Semantically counteract committed operations.
-Lesson 088. Read-Through Cache
+Lesson 2.32. Read-Through Cache
     Type: Caching pattern
     Goal: Retrieve missing values through a cache's loading mechanism.
-Lesson 089. Write-Through / Write-Behind Cache
+Lesson 2.33. Write-Through / Write-Behind Cache
     Type: Caching patterns
     Goal: Coordinate cache writes synchronously or asynchronously with storage.
-Lesson 090. Sharding
+Lesson 2.34. Sharding
     Type: Data partitioning technique
     Goal: Distribute partitions of data over multiple nodes.
-Lesson 091. Primary-Replica Replication
+Lesson 2.35. Primary-Replica Replication
     Type: Replication architecture
     Goal: Replicate data from a primary to one or more replicas.
-Lesson 092. Optimistic Concurrency Control
+Lesson 2.36. Optimistic Concurrency Control
     Type: Concurrency technique
     Goal: Detect conflicting updates before committing changes.
-Lesson 093. API Composition
+Lesson 2.37. API Composition
     Type: Data aggregation pattern
     Goal: Combine information from multiple services at query time.
 
 Deployment and verification
 ---------------------------
-Lesson 094. Blue-Green Deployment
+Lesson 2.38. Blue-Green Deployment
     Type: Deployment strategy
     Goal: Switch between two separate deployment environments.
-Lesson 095. Canary Deployment
+Lesson 2.39. Canary Deployment
     Type: Deployment strategy
     Goal: Roll out to a controlled subset before wider adoption.
-Lesson 096. Rolling Deployment
+Lesson 2.40. Rolling Deployment
     Type: Deployment strategy
     Goal: Update instances incrementally while serving traffic.
-Lesson 097. Distributed Tracing
+Lesson 2.41. Distributed Tracing
     Type: Observability technique
     Goal: Track an operation across service boundaries.
-Lesson 098. Consumer-Driven Contract Testing
+Lesson 2.42. Consumer-Driven Contract Testing
     Type: Testing practice
     Goal: Check providers against requirements expressed by consumers.
 
@@ -292,58 +333,59 @@ LEVEL 3 — ADVANCED ARCHITECTURE AND OPERATIONS
 
 Advanced messaging and ordering
 -------------------------------
-Lesson 099. Resequencer
+Lesson 3.1. Resequencer
     Type: Messaging pattern
     Goal: Restore required order among related messages.
-Lesson 100. Sequential Convoy
+Lesson 3.2. Sequential Convoy
     Type: Messaging/ordering pattern
     Goal: Preserve ordering per group while processing groups in parallel.
 
 Advanced distributed computation and coordination
 -------------------------------------------------
-Lesson 101. MapReduce
+Lesson 3.3. MapReduce
     Type: Distributed computation model
     Goal: Map large datasets into parallel tasks and reduce intermediate results.
-Lesson 102. Distributed Lock with Fencing Tokens
+Lesson 3.4. Distributed Lock with Fencing Tokens
     Type: Distributed coordination pattern
     Goal: Prevent stale lock holders from corrupting shared resources.
 
 Advanced storage and data processing
 ------------------------------------
-Lesson 103. Event Sourcing
+Lesson 3.5. Event Sourcing
     Type: Data architecture pattern
     Goal: Represent state changes as an append-only event history.
-Lesson 104. Materialized View
+Lesson 3.6. Materialized View
     Type: Data architecture pattern
     Goal: Maintain precomputed representations for efficient queries.
-Lesson 105. Consistent Hashing
+Lesson 3.7. Consistent Hashing
     Type: Data placement technique
     Goal: Reduce key movement when nodes join or leave.
-Lesson 106. Transaction Log Tailing
+Lesson 3.8. Transaction Log Tailing
     Type: Change-data-capture technique
     Goal: Extract database changes from a transaction log.
 
 Advanced service infrastructure
 -------------------------------
-Lesson 107. Service Mesh
+Lesson 3.9. Service Mesh
     Type: Service infrastructure architecture
     Goal: Provide service-to-service traffic and security capabilities.
-Lesson 108. Ambassador
+Lesson 3.10. Ambassador
     Type: Service proxy pattern
     Goal: Proxy outbound or inbound communications for a service.
 
 Advanced reliability and operations
 -----------------------------------
-Lesson 109. Hedged Requests
+Lesson 3.11. Hedged Requests
     Type: Tail-latency technique
     Goal: Send controlled redundant requests to reduce slow outliers.
-Lesson 110. Deployment Stamps
+Lesson 3.12. Deployment Stamps
     Type: Deployment architecture pattern
     Goal: Build repeatable units of applications and infrastructure.
 
 ========================================================================
 HOW TO USE THIS ROADMAP
 ========================================================================
+0. Refer to Level 0 (0.1–0.23) for the original GoF lessons.
 1. Work through Level 1 to build the application architecture foundation.
 2. Use Level 2 to study realistic distributed message processing, data
    consistency, resilience, and deployment concerns.
